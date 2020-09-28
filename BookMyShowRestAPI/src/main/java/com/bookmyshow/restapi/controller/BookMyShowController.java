@@ -21,8 +21,8 @@ public class BookMyShowController {
 	@RequestMapping(value = "/bookingShow", method = RequestMethod.POST)
 	public String bookShow(@RequestBody BookRequest bookRequest) {
 		BookRequest response = bookMyShowRepository.save(bookRequest);
-		return "Hi" + response.getUserName() + "your request for " + response.getShowName() + "on date "
-				+ response.getBookingTime() + "is confirmed";
+		return "Hi " + response.getUserName() + " your request for " + response.getShowName() + " on date "
+				+ response.getBookingTime() + " is confirmed";
 	}
 
 	@RequestMapping(value = "/getAllBooking", method = RequestMethod.GET)
