@@ -48,9 +48,8 @@ public class BookMyShowController {
 		dbResponse.setPrice(updateBookingRequest.getPrice());
 		dbResponse.setShowName(updateBookingRequest.getShowName());
 		dbResponse.setUserCount(updateBookingRequest.getUserCount());
-
+		
 		bookMyShowRepository.saveAndFlush(dbResponse);
-
 		return dbResponse;
 	}
 }
