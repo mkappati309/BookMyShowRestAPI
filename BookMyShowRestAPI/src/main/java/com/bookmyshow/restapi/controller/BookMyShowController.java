@@ -13,6 +13,7 @@ import com.bookmyshow.restapi.model.BookRequest;
 import com.bookmyshow.restapi.repository.BookMyShowRepository;
 
 @RestController
+@RequestMapping("/bookmyshow/service")
 public class BookMyShowController {
 
 	@Autowired
@@ -48,7 +49,7 @@ public class BookMyShowController {
 		dbResponse.setPrice(updateBookingRequest.getPrice());
 		dbResponse.setShowName(updateBookingRequest.getShowName());
 		dbResponse.setUserCount(updateBookingRequest.getUserCount());
-		
+
 		bookMyShowRepository.saveAndFlush(dbResponse);
 		return dbResponse;
 	}
